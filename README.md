@@ -5,9 +5,9 @@ MezToHugo is a modern tool to migrate from [Mezzanine](http://mezzanine.jupo.org
 
 ## Usage
 
-1. Download the binary file from releases.
-2. Create `config.yml` file in the working directoty where you will run the too.
-3. Paste the following things into config file.
+1. Download the binary file from [releases](https://github.com/maateen/meztohugo/releases) tab.
+2. Create `config.yml` file in the working directoty where you will run this tool.
+3. Paste the following content into `config.yml` file. Please don't forget to make the necessary changes.
 ```yml
 database:
   type: "mysql"
@@ -22,7 +22,7 @@ hugo:
   defaultCoverImage: "/img/cover.jpg"
 ```
 4. Now run the tool from terminal.
-```
+```bash
 $ chmod +x meztohugo
 $ ./meztohugo
 ```
@@ -32,3 +32,4 @@ $ ./meztohugo
 Please contribute and complete the project if you can.
 
 - [ ] Add support to export page.
+- [ ] Add more comments to code blocks.
