@@ -15,6 +15,7 @@
 vendor/
 
 # Custom
+bin/
 post/
 config.yml
 meztohugo
