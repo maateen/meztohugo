@@ -6,6 +6,7 @@ BINARY_NAME=meztohugo
 GOBIN=bin
 GOOS=darwin linux windows
 GOARCH=amd64 386
+VERSION=v0.1-alpha
 
 all: prepare build
 prepare:
@@ -15,12 +16,11 @@ build:
 		mkdir -p $(GOBIN); \
 		for goos in $(GOOS); do \
 			for goarch in $(GOARCH); do \
-				echo $$goos $$goarch; \
 				GOOS=$$goos GOARCH=$$goarch $(GOBUILD) cmd/meztohugo/main.go; \
 				if [ -f main.exe ]; then \
-					mv main.exe $(GOBIN)/$(BINARY_NAME)-$$goos-$$goarch.exe; \
+					mv main.exe $(GOBIN)/$(BINARY_NAME)-$$goos-$$goarch-$(VERSION).exe; \
 				else \
-					mv main $(GOBIN)/$(BINARY_NAME)-$$goos-$$goarch; \
+					mv main $(GOBIN)/$(BINARY_NAME)-$$goos-$$goarch-$(VERSION); \
 				fi \
 			done \
 		done
